@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+
+    <title>PDF Merger</title>
+  </head>
+  <body style="background-color: rgb(220, 220, 220)">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/"><strong>PdfS</strong></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div
+      style="background-color: rgb(220, 220, 220); width: 100%; height: 100vh"
+    >
+      <div class="container my-4">
+        <h1
+          style="
+            display: flex;
+            border: 2px solid red;
+            padding: 10px 10px 15px 10px;
+            /* padding-bottom: 0; */
+            margin-bottom: 0;
+            border-radius: 25px 35px 0px 35px;
+          "
+        >
+          <strong style="margin: auto; margin-right: 15px">PdfS</strong>
+          <marquee behavior="" direction="">
+            &#160;Your personal PDF Merger Tool</marquee
+          >
+        </h1>
+        <form method="post" action="/merge" enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="exampleFormControlFile1"
+              >Choose pdf files to merge...
+            </label>
+            <input
+              type="file"
+              class="form-control-file"
+              id="exampleFormControlFile1"
+              multiple
+              accept=".pdf"
+              name="pdfs"
+            />
+            <input class="btn btn-danger my-4" type="submit" value="Submit" />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
