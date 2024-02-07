@@ -19,7 +19,11 @@ const mergePdfs = async (p1, p2) => {
     title: "Merged Pdf",
   });
 
-  await merger.save("public/merged.pdf"); //save under given name and reset the internal document
+  let d = new Date().getTime();
+
+  await merger.save(`public/${d}.pdf`); //save under given name and reset the internal document
+
+  return d;
 
   // Export the merged PDF as a nodejs Buffer
   // const mergedPdfBuffer = await merger.saveAsBuffer();
